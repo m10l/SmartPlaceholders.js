@@ -1,0 +1,219 @@
+html, input, textarea, h1, h3 {
+	font-weight: 300;
+	font-family: 'Roboto';
+}
+
+body {
+	padding: 2em;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 320px;
+}
+
+h1 {
+	text-align: center;
+}
+
+form textarea {
+	resize: vertical;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block;
+	width: 320px;
+	border: 1px solid #eee;
+	margin: 1em 0;
+	padding: 1em;
+	position: relative;
+	color: #666;
+
+	-moz-transition: 0.1s ease-in-out color, 0.1s ease-in-out padding, 0.1s ease-in-out border;
+	-webkit-transition: 0.1s ease-in-out color, 0.1s ease-in-out padding, 0.1s ease-in-out border;
+	transition: 0.1s ease-in-out color, 0.1s ease-in-out padding, 0.1s ease-in-out border;
+
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+	form input:focus,
+	form textarea:focus {
+		-webkit-outline: none;
+		-moz-outline: none;
+		outline: none;
+		border: 1px solid #ccc;
+		color: #333;
+	}
+
+	form input::-webkit-input-placeholder,
+	form textarea::-webkit-input-placeholder {
+		-webkit-transition: 0.1s ease-in-out;
+		-moz-transition: 0.1s ease-in-out;
+		transition: 0.1s ease-in-out;
+	}
+
+	form input:focus::-webkit-input-placeholder,
+	form textarea:focus::-webkit-input-placeholder {
+		opacity: 0;
+	}
+
+form input[type="submit"]{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block;
+	width: 320px;
+	border: none;
+	margin: 1em 0;
+	padding: 1em;
+	position: relative;
+	background-color: #6d6;
+	color: #fff;
+	background-image: -webkit-radial-gradient( circle, transparent 0%, rgba(0,0,0,0.1) 100% );
+	background-image: -moz-radial-gradient( circle, transparent 0%, rgba(0,0,0,0.1) 100% );
+	background-image: radial-gradient( circle, transparent 0%, rgba(0,0,0,0.1) 100% );
+	
+	-moz-transition: 0.1s ease-in-out;
+	-webkit-transition: 0.1s ease-in-out;
+	transition: 0.1s ease-in-out;
+
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+form input[type="submit"]:hover{
+	background-color: #7e7;
+}
+
+form input[type="submit"]:active{
+	background-color: #5c5;
+}
+
+.smart-placeholder-wrapper {
+	position: relative;
+}
+
+.smart-placeholder {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 1em;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: normal;
+	opacity: 0;
+	-webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
+}
+
+form .populated input[type="text"],
+form .populated textarea,
+form .focused input[type="text"],
+form .focused textarea  {
+	padding-top: 2em;
+}
+
+.focused .smart-placeholder,
+.populated .smart-placeholder {
+	color: #999;
+	z-index: 10;
+	opacity: 1;
+}
+
+.focused.populated .smart-placeholder {
+	color: #666;
+}
+
+.attributes {
+	background: #eee;
+	border-top: 1px solid #ddd;
+	font-size: 10px;
+	text-align: center;
+	font-weight: 500;
+	position: absolute;
+	bottom: 0; left: 0;
+	padding: 2em 0;
+	margin-bottom: 0;
+	width: 100%;
+}
+
+a {
+	color: #66f;
+}
+
+.blackout {
+	position: absolute;
+	top: 0; left: 0;
+	height: 100%; width: 100%;
+	background: rgba(0,0,0,0.8);
+	z-index: 20;
+	cursor: pointer;
+}
+
+.modal {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 1em;
+	text-align: center;
+	position: absolute;
+	top: 20%; left: 50%;
+	z-index: 30;
+	height: 25px;
+	width: 300px;
+	margin-left: -150px;
+	color: #fff;
+}
+
+.modal h3 {
+	margin-top: 0;
+}
+
+@media ( max-width: 390px ){
+
+	body {
+		padding: 0;
+	}
+
+	.wrapper {
+		width: 100%;
+		padding: 1em;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	form input[type="text"],
+	form input[type="submit"],
+	form textarea {
+		width: 100%;
+	}
+
+	.modal {
+		left: 0;
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.attributes {
+		position: static;
+		background: none;
+	}
+
+}

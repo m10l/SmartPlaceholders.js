@@ -1,0 +1,74 @@
+/* ==================== */
+/* SmartPlaceholders.js */
+/* ==================== */
+
+/* For positioning smart placeholder relative to input */
+.smart-placeholder-wrapper {
+	position: relative;
+}
+
+.smart-placeholder {
+	position: absolute;
+	top: 0; left: 0;
+	z-index: 10;
+	visibility: hidden;
+	opacity: 0;
+
+	-webkit-transition: 0.1s ease-in-out;
+	   -moz-transition: 0.1s ease-in-out;
+	        transition: 0.1s ease-in-out;
+}
+
+/* For giving space for smart placeholder to appear */
+.smart-placeholder-wrapper.populated input,
+.smart-placeholder-wrapper.focused input,
+.smart-placeholder-wrapper.populated textarea,
+.smart-placeholder-wrapper.focused textarea {
+	padding-top: 2em;
+}
+
+/* Show smart placeholder when we have content or are about to enter content */
+.smart-placeholder-wrapper.populated .smart-placeholder,
+.smart-placeholder-wrapper.focused .smart-placeholder {
+	visibility: visible;
+	opacity: 1;
+}
+
+.smart-placeholder-wrapper input,
+.smart-placeholder-wrapper textarea {
+	-webkit-transition: 0.1s ease-in-out;
+	   -moz-transition: 0.1s ease-in-out;
+	        transition: 0.1s ease-in-out;
+}
+
+/* For hiding input default placeholder on focus */
+.smart-placeholder-wrapper.focused ::-webkit-input-placeholder {
+	color: transparent;
+}
+.smart-placeholder-wrapper.focused :-moz-placeholder {
+	color: transparent;
+}
+.smart-placeholder-wrapper.focused ::-moz-placeholder {
+	color: transparent;
+}
+.smart-placeholder-wrapper.focused :-ms-input-placeholder {
+	color: transparent;
+}
+
+/* Animation for placeholder text */
+.smart-placeholder-wrapper ::-webkit-input-placeholder {
+	-webkit-transition: 0.1s ease-in-out;
+	        transition: 0.1s ease-in-out;
+}
+.smart-placeholder-wrapper :-moz-placeholder {
+	-moz-transition: 0.1s ease-in-out;
+			 transition: 0.1s ease-in-out;
+}
+.smart-placeholder-wrapper ::-moz-placeholder {
+	-moz-transition: 0.1s ease-in-out;
+			 transition: 0.1s ease-in-out;
+}
+.smart-placeholder-wrapper :-ms-input-placeholder {
+	-ms-transition: 0.1s ease-in-out;
+      transition: 0.1s ease-in-out;
+}

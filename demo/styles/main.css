@@ -5,10 +5,19 @@ html, input, textarea, h1, h3 {
 
 body {
 	padding: 2em;
+	text-align: center;
 
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
+}
+
+h1, h3 {
+	text-rendering: optimizeLegibility;
+}
+
+a {
+	color: #66f;
 }
 
 .wrapper {
@@ -16,32 +25,37 @@ body {
 	width: 320px;
 }
 
-h1 {
+.attributes {
+	background: #eee;
+	border-top: 1px solid #ddd;
+	font-size: 10px;
 	text-align: center;
+	font-weight: 500;
+	position: absolute;
+	bottom: 0; left: 0;
+	padding: 2em 0;
+	margin-bottom: 0;
+	width: 100%;
 }
+
+/* Form Field Styling */
 
 form textarea {
 	resize: vertical;
 }
 
 form input[type="text"],
-form input[type="email"],
 form textarea {
 	display: block;
 	width: 320px;
 	border: 1px solid #eee;
 	margin: 1em 0;
 	padding: 1em;
-	position: relative;
 	color: #666;
 
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
-
-	-webkit-transition: 0.1s ease-in-out color, 0.1s ease-in-out padding, 0.1s ease-in-out border;
-	   -moz-transition: 0.1s ease-in-out color, 0.1s ease-in-out padding, 0.1s ease-in-out border;
-	        transition: 0.1s ease-in-out color, 0.1s ease-in-out padding, 0.1s ease-in-out border;
 
 	-webkit-appearance: none;
 	   -moz-appearance: none;
@@ -62,21 +76,7 @@ form textarea {
 		outline: none;
 	}
 
-	form input::-webkit-input-placeholder,
-	form input::-moz-input-placeholder,
-	form input::input-placeholder,
-	form textarea::-webkit-input-placeholder,
-	form textarea::-moz-input-placeholder,
-	form textarea::input-placeholder {
-		-webkit-transition: 0.1s ease-in-out;
-		   -moz-transition: 0.1s ease-in-out;
-		        transition: 0.1s ease-in-out;
-	}
-
-	form input:focus::-webkit-input-placeholder,
-	form textarea:focus::-webkit-input-placeholder {
-		opacity: 0;
-	}
+/* Submit Button */
 
 form input[type="submit"]{
 	display: block;
@@ -96,10 +96,6 @@ form input[type="submit"]{
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
 
-	-webkit-transition: 0.1s ease-in-out;
-	   -moz-transition: 0.1s ease-in-out;
-        	transition: 0.1s ease-in-out;
-
 	-webkit-border-radius: 0;
 	   -moz-border-radius: 0;
 	        border-radius: 0;
@@ -113,59 +109,27 @@ form input[type="submit"]:active{
 	background-color: #5c5;
 }
 
-.smart-placeholder-wrapper {
-	position: relative;
-}
+/* Demo SmartPlaceholders.js Styling */
 
 .smart-placeholder {
-	position: absolute;
-	top: 0;
-	left: 0;
 	padding: 1em;
 	font-size: 12px;
 	font-weight: 500;
 	line-height: normal;
-	opacity: 0;
-
-	-webkit-transition: 0.2s ease-in-out;
-	   -moz-transition: 0.2s ease-in-out;
-	        transition: 0.2s ease-in-out;
-}
-
-form .populated input[type="text"],
-form .populated textarea,
-form .focused input[type="text"],
-form .focused textarea  {
-	padding-top: 2em;
 }
 
 .focused .smart-placeholder,
 .populated .smart-placeholder {
 	color: #999;
-	z-index: 10;
-	opacity: 1;
 }
 
 .focused.populated .smart-placeholder {
 	color: #666;
 }
 
-.attributes {
-	background: #eee;
-	border-top: 1px solid #ddd;
-	font-size: 10px;
-	text-align: center;
-	font-weight: 500;
-	position: absolute;
-	bottom: 0; left: 0;
-	padding: 2em 0;
-	margin-bottom: 0;
-	width: 100%;
-}
-
-a {
-	color: #66f;
-}
+/* ============ */
+/* Modal Window */
+/* ============ */
 
 .blackout {
 	position: absolute;
@@ -195,6 +159,8 @@ a {
 .modal h3 {
 	margin-top: 0;
 }
+
+/* For Small Widths */
 
 @media ( max-width: 390px ){
 

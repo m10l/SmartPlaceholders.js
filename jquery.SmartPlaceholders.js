@@ -1,6 +1,6 @@
 (function( $ ) {
 
-	$.fn.smartPlaceholders = function( options ) {
+	$.fn.SmartPlaceholders = function( options ) {
 
 		var settings = $.extend({
 
